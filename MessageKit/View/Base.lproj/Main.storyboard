@@ -216,36 +216,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iem-su-N39">
-                                <rect key="frame" x="20" y="88" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lYk-Gy-Rbg">
-                                <rect key="frame" x="20" y="105" width="374" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fjZ-aw-0ox">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ncc-ek-nwr">
-                                <rect key="frame" x="20" y="241" width="374" height="621"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fpt-L8-mv5">
+                                <rect key="frame" x="20" y="88" width="374" height="783"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iem-su-N39">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lYk-Gy-Rbg">
+                                        <rect key="frame" x="0.0" y="34" width="374" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="Lzh-lq-mh1"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fjZ-aw-0ox">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ncc-ek-nwr">
+                                        <rect key="frame" x="0.0" y="162" width="374" height="621"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ncc-ek-nwr" firstAttribute="top" secondItem="lYk-Gy-Rbg" secondAttribute="bottom" id="7kD-H2-7c9"/>
+                                    <constraint firstAttribute="bottom" secondItem="ncc-ek-nwr" secondAttribute="bottom" id="ppG-6C-Zhd"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="iem-su-N39" firstAttribute="leading" secondItem="pA0-Eo-rHY" secondAttribute="leading" constant="20" id="LEY-mW-YBS"/>
-                            <constraint firstItem="pA0-Eo-rHY" firstAttribute="trailing" secondItem="iem-su-N39" secondAttribute="trailing" constant="20" id="b4L-x5-3p4"/>
-                            <constraint firstItem="iem-su-N39" firstAttribute="top" secondItem="pA0-Eo-rHY" secondAttribute="top" id="cXR-Ky-VPM"/>
-                            <constraint firstItem="iem-su-N39" firstAttribute="leading" secondItem="pA0-Eo-rHY" secondAttribute="leading" constant="20" id="fum-oi-Qkv"/>
-                            <constraint firstItem="pA0-Eo-rHY" firstAttribute="trailing" secondItem="iem-su-N39" secondAttribute="trailing" constant="20" id="ucp-ld-fcL"/>
+                            <constraint firstItem="fpt-L8-mv5" firstAttribute="top" secondItem="pA0-Eo-rHY" secondAttribute="top" id="pZw-Ke-9wQ"/>
+                            <constraint firstItem="fpt-L8-mv5" firstAttribute="leading" secondItem="W1M-0T-Bb1" secondAttribute="leadingMargin" id="x4H-Rm-rKv"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="fpt-L8-mv5" secondAttribute="bottom" constant="-9" id="yim-aj-Fc2"/>
+                            <constraint firstItem="fpt-L8-mv5" firstAttribute="trailing" secondItem="W1M-0T-Bb1" secondAttribute="trailingMargin" id="ypL-W7-SRK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pA0-Eo-rHY"/>
                     </view>
@@ -253,6 +262,7 @@
                     <connections>
                         <outlet property="chatTableView" destination="ncc-ek-nwr" id="iej-ca-peZ"/>
                         <outlet property="onlineCollectionView" destination="lYk-Gy-Rbg" id="Z9z-hw-VKp"/>
+                        <outlet property="searchTxt" destination="iem-su-N39" id="KTc-FE-as5"/>
                         <segue destination="iaP-VJ-qeI" kind="show" identifier="gotoChat" id="ENL-Og-EhA"/>
                     </connections>
                 </viewController>
@@ -288,20 +298,28 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FkV-DX-Kbs">
                                         <rect key="frame" x="0.0" y="692" width="414" height="82"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PsR-X9-tIZ">
-                                                <rect key="frame" x="8" y="23.5" width="49" height="33"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="paperplane" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="e8o-m8-s1r">
-                                                <rect key="frame" x="363" y="19.5" width="37" height="41"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0SS-bD-pVA">
                                                 <rect key="frame" x="69" y="24" width="276" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="send"/>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJ4-UU-x5M">
+                                                <rect key="frame" x="26" y="21" width="35" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="camera.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="imageSelectorPress:" destination="iaP-VJ-qeI" eventType="touchUpInside" id="Eew-3D-eMF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piI-Qb-mjd">
+                                                <rect key="frame" x="353" y="19" width="42" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="paperplane.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="sendPress:" destination="iaP-VJ-qeI" eventType="touchUpInside" id="ucX-ay-5kE"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
@@ -329,8 +347,8 @@
                     <navigationItem key="navigationItem" id="N6u-Pp-8Th"/>
                     <connections>
                         <outlet property="_inputView" destination="FkV-DX-Kbs" id="1aQ-2w-N6X"/>
-                        <outlet property="_sender" destination="e8o-m8-s1r" id="IFt-jv-lbP"/>
-                        <outlet property="imageSelector" destination="PsR-X9-tIZ" id="8hY-mQ-Bek"/>
+                        <outlet property="_sender" destination="piI-Qb-mjd" id="Hff-ps-x8q"/>
+                        <outlet property="imageSelector" destination="OJ4-UU-x5M" id="OH7-IY-YeS"/>
                         <outlet property="inputText" destination="0SS-bD-pVA" id="Zb1-Bj-y1K"/>
                     </connections>
                 </viewController>
@@ -359,6 +377,6 @@
     </scenes>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="96"/>
-        <image name="paperplane" catalog="system" width="128" height="121"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

@@ -19,6 +19,12 @@ class MainScreenController: UIViewController{
     
     
     
+    @IBOutlet weak var searchTxt: UITextField!{
+        didSet{
+            searchTxt.tintColor = UIColor.lightGray
+            setIcon()
+        }
+    }
     @IBOutlet weak var onlineCollectionView: UICollectionView!
     @IBOutlet weak var chatTableView: UITableView!
     
@@ -32,6 +38,17 @@ class MainScreenController: UIViewController{
         getOnlineUser()
         
         updateUserStatus(true)
+    }
+    
+    func setIcon() {
+       let iconView = UIImageView(frame:
+                      CGRect(x: 10, y: 5, width: 20, height: 20))
+       iconView.image = UIImage(systemName: "magnifyingglass")
+       let iconContainerView: UIView = UIView(frame:
+                      CGRect(x: 20, y: 0, width: 30, height: 30))
+       iconContainerView.addSubview(iconView)
+        searchTxt.leftView = iconContainerView
+        searchTxt.leftViewMode = .always
     }
     
     override func viewDidDisappear(_ animated: Bool) {
