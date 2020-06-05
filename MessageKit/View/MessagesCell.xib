@@ -41,6 +41,12 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="419" height="278"/>
+            <connections>
+                <outlet property="buddyImg" destination="9pA-ZR-9Tk" id="gMt-30-UyT"/>
+                <outlet property="messageImg" destination="5fU-FH-WIX" id="249-Ey-8h6"/>
+                <outlet property="messageText" destination="Jbq-jc-m5t" id="r0c-mQ-lci"/>
+                <outlet property="userImg" destination="VRl-Sk-feh" id="hOc-y4-0Ze"/>
+            </connections>
             <point key="canvasLocation" x="15.217391304347828" y="11.383928571428571"/>
         </collectionViewCell>
     </objects>

@@ -23,9 +23,9 @@
 		A882870F247BA99A00267CDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A882870E247BA99A00267CDE /* Assets.xcassets */; };
 		A8828712247BA99A00267CDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8828710247BA99A00267CDE /* LaunchScreen.storyboard */; };
 		A8ACC207247CABEF00EF6303 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ACC206247CABEF00EF6303 /* RegisterController.swift */; };
-		A8C35B45248737BF00699278 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C35B44248737BF00699278 /* test.swift */; };
 		A8C35B4824873A1700699278 /* MessagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C35B4624873A1700699278 /* MessagesCell.swift */; };
 		A8C35B4924873A1700699278 /* MessagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8C35B4724873A1700699278 /* MessagesCell.xib */; };
+		A8EB7BDE248A25DD00402A11 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB7BDD248A25DD00402A11 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,9 +47,9 @@
 		A8828711247BA99A00267CDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8828713247BA99A00267CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8ACC206247CABEF00EF6303 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
-		A8C35B44248737BF00699278 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		A8C35B4624873A1700699278 /* MessagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesCell.swift; sourceTree = "<group>"; };
 		A8C35B4724873A1700699278 /* MessagesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessagesCell.xib; sourceTree = "<group>"; };
+		A8EB7BDD248A25DD00402A11 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		AB7CDD8990DD51946BA92E50 /* Pods_MessageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0AC21E7D6C700EB62DF426F /* Pods-MessageKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageKit.release.xcconfig"; path = "Target Support Files/Pods-MessageKit/Pods-MessageKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,7 +116,6 @@
 				A87F6C222485E59100A7031C /* LoginController.swift */,
 				A87F6C242485E5C300A7031C /* MainScreenController.swift */,
 				A87F6C282486611000A7031C /* ChatViewController.swift */,
-				A8C35B44248737BF00699278 /* test.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -139,6 +138,7 @@
 				A804E6B32485055A00A0F155 /* OnlineUserCell.swift */,
 				A87F6C262486383D00A7031C /* User.swift */,
 				A8C35B4624873A1700699278 /* MessagesCell.swift */,
+				A8EB7BDD248A25DD00402A11 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -273,10 +273,10 @@
 				A87F6C232485E59100A7031C /* LoginController.swift in Sources */,
 				A804E6B52485055A00A0F155 /* OnlineUserCell.swift in Sources */,
 				A882870A247BA99800267CDE /* ViewController.swift in Sources */,
-				A8C35B45248737BF00699278 /* test.swift in Sources */,
 				A87F6C252485E5C300A7031C /* MainScreenController.swift in Sources */,
 				A87F6C272486383D00A7031C /* User.swift in Sources */,
 				A8828706247BA99800267CDE /* AppDelegate.swift in Sources */,
+				A8EB7BDE248A25DD00402A11 /* Message.swift in Sources */,
 				A8C35B4824873A1700699278 /* MessagesCell.swift in Sources */,
 				A87F6C1F2485E36800A7031C /* ChatCell.swift in Sources */,
 				A87F6C292486611000A7031C /* ChatViewController.swift in Sources */,

@@ -60,7 +60,7 @@ class MainScreenController: UIViewController{
         
         if segue.identifier == "gotoChat"{
             let desVC = segue.destination as! ChatViewController
-            desVC.user = desinationUserId
+            desVC.buddy = desinationUserId
             
         }
     }
